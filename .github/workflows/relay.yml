@@ -1,10 +1,11 @@
 {
  "name": "WoT NA RSS relay",
- "on": {"workflow_dispatch": {}},
+ "on": {"schedule": [{"cron": "30 9 * * *"}, {"cron": "30 20 * * *"}], "workflow_dispatch": {}},
  "permissions": {"contents": "write"},
  "jobs": {"fetch": {"runs-on": "ubuntu-latest", "steps": [
   {"uses": "actions/checkout@v4"},
-  {"name": "Fetch NA feed", "run": "curl -s -m 30 -A 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36' -o feed.tmp -w 'http=%{http_code} type=%{content_type} bytes=%{size_download}\\n' https://worldoftanks.com/en/rss/news/\necho \"egress: $(curl -s -m 10 https://api.ipify.org)\"\necho \"start: $(head -c 100 feed.tmp | tr -d '\\r\\n')\"\nFIRST=$(grep -o '<link>[^<]*</link>' feed.tmp | head -1)\necho \"channel link: $FIRST\"\ngrep -o '<title>[^<]*</title>' feed.tmp | head -4\nif head -c 100 feed.tmp | grep -q '<?xml' && echo \"$FIRST\" | grep -q 'worldoftanks.com'; then mv feed.tmp wot_na_news.xml; echo RESULT=NA_XML_OK; else echo RESULT=NOT_NA_XML; exit 1; fi"},
-  {"name": "Save", "run": "git config user.name 'ucc-relay'\ngit config user.email 'ucc-relay@users.noreply.github.com'\ngit add wot_na_news.xml\ngit diff --cached --quiet || git commit -m \"NA feed $(date -u +%FT%TZ)\"\ngit push"}
+  {"name": "Fetch NA feed", "run": "UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'\necho \"egress: $(curl -s -m 10 https://api.ipify.org)\"\nOK=0\nfor i in 1 2 3; do\n  curl -s -m 30 -A \"$UA\" -o feed.tmp -w \"try $i http=%{http_code} type=%{content_type} bytes=%{size_download}\\n\" https://worldoftanks.com/en/rss/news/ || true\n  FIRST=$(grep -o '<link>[^<]*</link>' feed.tmp | head -1) || true\n  echo \"channel link: $FIRST\"\n  if head -c 100 feed.tmp | grep -q '<?xml' && echo \"$FIRST\" | grep -q 'worldoftanks.com'; then OK=1; break; fi\n  sleep 20\ndone\nif [ \"$OK\" = 1 ]; then mv feed.tmp wot_na_news.xml; R=OK; else R=FAIL; fi\nrm -f feed.tmp\nB=$(wc -c < wot_na_news.xml 2>/dev/null || echo 0)\necho \"utc=$(date -u +%Y-%m-%dT%H:%M:%SZ) result=$R attempts=$i bytes=$B\" > relay_heartbeat.txt\ncat relay_heartbeat.txt"},
+  {"name": "Save", "run": "git config user.name 'ucc-relay'\ngit config user.email 'ucc-relay@users.noreply.github.com'\ngit add relay_heartbeat.txt\n[ -f wot_na_news.xml ] && git add wot_na_news.xml\ngit commit -m \"relay $(cat relay_heartbeat.txt)\"\ngit push"},
+  {"name": "Report", "run": "grep -q 'result=OK' relay_heartbeat.txt || { echo 'RESULT=NOT_NA_XML -- last good feed kept'; exit 1; }\necho RESULT=NA_XML_OK"}
  ]}}
 }
