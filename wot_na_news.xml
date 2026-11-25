@@ -16,7 +16,7 @@
             World of Tanks news: Read the latest news on the free MMO World of Tanks game, the best game for all players
         </description>
         <language> en </language>
-        <pubDate>Tue, 24 Nov 2026 22:56:18 GMT</pubDate>
+        <pubDate>Wed, 25 Nov 2026 13:38:05 GMT</pubDate>
 
         <image>
             <url>https://worldoftanks.com/static/6.16.1_aee7f5/portalnews/img/news.png</url>
@@ -24,6 +24,31 @@
             <link>https://worldoftanks.com/en/news/</link>
         </image>
 
+        
+            <item>
+                <title>New Tier XI Vehicles: Take a First Look!</title>
+                <link>https://worldoftanks.com/en/news/general-news/2-4-3-tanks-overview/</link>
+                <description>
+                    <![CDATA[
+
+<div>
+    Meet the Object 720 (a Soviet assault heavy), the E 55 (a German assault medium), and the Vz. 75 (a Czechoslovakian sniper TD).
+</div>
+
+<div>
+    <a href="https://worldoftanks.com/en/news/general-news/2-4-3-tanks-overview/">Read more</a>
+    
+        <a href="https://discord.gg/YQ7N4U2DRF" target="_blank"> Discuss </a>
+    
+</div>]]>
+                </description>
+                <guid isPermaLink="true">https://worldoftanks.com/en/news/general-news/2-4-3-tanks-overview/</guid>
+                <pubDate>Wed, 25 Nov 2026 13:00:00 GMT</pubDate>
+                <category domain="https://worldoftanks.com/en/news/general-news/">General News</category>
+                
+                <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/1022x360_with_round_play_button_fin_tier-xi-nov26.jpg" length="100899" type="image/jpeg" />
+                
+            </item>
         
             <item>
                 <title>Update 2.4.2: A Taste of the Festive Season</title>
@@ -497,31 +522,6 @@
                 <category domain="https://worldoftanks.com/en/news/specials/">Specials</category>
                 
                 <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/boosteroid_november_2026_1022x360_thumbnail.jpg" length="111791" type="image/jpeg" />
-                
-            </item>
-        
-            <item>
-                <title>Frontline 2026: Autumn Launch</title>
-                <link>https://worldoftanks.com/en/news/general-news/frontline-autumn-november-2026/</link>
-                <description>
-                    <![CDATA[
-
-<div>
-    Frontline is with us once again! Enjoy intense and complex 30v30 battles, and earn a heap of rewards.
-</div>
-
-<div>
-    <a href="https://worldoftanks.com/en/news/general-news/frontline-autumn-november-2026/">Read more</a>
-    
-        <a href="https://discord.gg/YQ7N4U2DRF" target="_blank"> Discuss </a>
-    
-</div>]]>
-                </description>
-                <guid isPermaLink="true">https://worldoftanks.com/en/news/general-news/frontline-autumn-november-2026/</guid>
-                <pubDate>Sat, 31 Oct 2026 13:00:00 GMT</pubDate>
-                <category domain="https://worldoftanks.com/en/news/general-news/">General News</category>
-                
-                <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/frontline_kv_new_portal_thumbnail_1022x360.jpg" length="158704" type="image/jpeg" />
                 
             </item>
         
