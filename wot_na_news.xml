@@ -16,7 +16,7 @@
             World of Tanks news: Read the latest news on the free MMO World of Tanks game, the best game for all players
         </description>
         <language> en </language>
-        <pubDate>Fri, 27 Nov 2026 03:00:12 GMT</pubDate>
+        <pubDate>Fri, 27 Nov 2026 13:47:25 GMT</pubDate>
 
         <image>
             <url>https://worldoftanks.com/static/6.16.1_aee7f5/portalnews/img/news.png</url>
@@ -24,6 +24,31 @@
             <link>https://worldoftanks.com/en/news/</link>
         </image>
 
+        
+            <item>
+                <title>Steve Buscemi Is on the Case in Holiday Ops 2027!</title>
+                <link>https://worldoftanks.com/en/news/general-news/holiday-ops-2027-celebrity-reveal/</link>
+                <description>
+                    <![CDATA[
+
+<div>
+    Christmas needs saving, and Steve Buscemi is on the case as Coldstone—a no-nonsense crime show host and tank enthusiast. Watch him unravel a festive conspiracy in the new Holiday Ops short film!
+</div>
+
+<div>
+    <a href="https://worldoftanks.com/en/news/general-news/holiday-ops-2027-celebrity-reveal/">Read more</a>
+    
+        <a href="https://discord.gg/YQ7N4U2DRF" target="_blank"> Discuss </a>
+    
+</div>]]>
+                </description>
+                <guid isPermaLink="true">https://worldoftanks.com/en/news/general-news/holiday-ops-2027-celebrity-reveal/</guid>
+                <pubDate>Fri, 27 Nov 2026 10:00:00 GMT</pubDate>
+                <category domain="https://worldoftanks.com/en/news/general-news/">General News</category>
+                
+                <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/asia_eu_esrb_pb_hops27_trailer_thumbnail_1022x360_play_no_text_lower.jpg" length="173434" type="image/jpeg" />
+                
+            </item>
         
             <item>
                 <title>Advent Calendar 2026: A December Full of Surprises!</title>
@@ -72,31 +97,6 @@
                 <category domain="https://worldoftanks.com/en/news/updates/">Updates</category>
                 
                 <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/micro_patch_wot_1022x360.jpg" length="103588" type="image/jpeg" />
-                
-            </item>
-        
-            <item>
-                <title>Holiday Ops 2027: Get Ready for the Premiere!</title>
-                <link>https://worldoftanks.com/en/news/general-news/holiday-ops-2027-the-countdown-begins/</link>
-                <description>
-                    <![CDATA[
-
-<div>
-    A festive mystery, a special guest, and Christmas to save. Join the countdown to our Holiday Ops short film!
-</div>
-
-<div>
-    <a href="https://worldoftanks.com/en/news/general-news/holiday-ops-2027-the-countdown-begins/">Read more</a>
-    
-        <a href="https://discord.gg/YQ7N4U2DRF" target="_blank"> Discuss </a>
-    
-</div>]]>
-                </description>
-                <guid isPermaLink="true">https://worldoftanks.com/en/news/general-news/holiday-ops-2027-the-countdown-begins/</guid>
-                <pubDate>Thu, 26 Nov 2026 10:00:00 GMT</pubDate>
-                <category domain="https://worldoftanks.com/en/news/general-news/">General News</category>
-                
-                <enclosure url="https://na-wotp.wgcdn.co/dcont/fb/image/asia_eu_esrb_pb_hops27_teaser_thumbnail_1022x360.jpg" length="139771" type="image/jpeg" />
                 
             </item>
         
